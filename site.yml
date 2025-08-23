@@ -2,10 +2,7 @@
 - hosts: test_servers
   become: true
   tasks:
-    - name: Run apt update
-      ansible.builtin.apt:
-        update_cache: yes
-
-    - name: Run apt upgrade
-      ansible.builtin.apt:
-        upgrade: dist
+    - name: Install neofetch
+      ansible.builtin.package:
+        name: neofetch
+        state: present
