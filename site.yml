@@ -1,5 +1,6 @@
 ---
-- hosts: test_servers
+- name: Install neofetch as sudo
+  hosts: all
   become: true
   tasks:
     - name: Install neofetch
