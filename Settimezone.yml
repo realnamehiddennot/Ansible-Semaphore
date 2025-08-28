@@ -1,4 +1,8 @@
-- name: Set timezone to Auckland
+---
+- name: Set system timezone via command
+  hosts: all
   become: true
-  community.general.timezone:
-    name: Pacific/Auckland
+  tasks:
+    - name: Set timezone to Pacific/Auckland
+      ansible.builtin.command: timedatectl set-timezone Pacific/Auckland
+      changed_when: true
