@@ -2,6 +2,7 @@
 - name: Set system timezone via command
   hosts: all
   become: true
+  become: root
   tasks:
     - name: Set timezone to Pacific/Auckland
       ansible.builtin.command: timedatectl set-timezone Pacific/Auckland
