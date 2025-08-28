@@ -1,8 +1,4 @@
----
-- name: Set timezone to Pacific/Auckland
-  hosts: all
+- name: Set timezone to Auckland
   become: true
-  tasks:
-    - name: Set timezone
-      community.general.timezone:
-        name: Pacific/Auckland
+  community.general.timezone:
+    name: Pacific/Auckland
