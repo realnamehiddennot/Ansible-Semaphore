@@ -2,6 +2,7 @@
 - name: Install neofetch as sudo
   hosts: all
   become: true
+  become_user: zoheb
   tasks:
     - name: Install neofetch
       ansible.builtin.package:
