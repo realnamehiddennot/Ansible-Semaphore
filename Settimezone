@@ -1,0 +1,9 @@
+---
+- name: Set timezone to Pacific/Auckland
+  hosts: all
+  become: true
+  become: root
+  tasks:
+    - name: Set timezone
+      community.general.timezone:
+        name: Pacific/Auckland
